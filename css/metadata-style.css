@@ -131,6 +131,24 @@ h3 sub {
     font-family: 'Courier New', Courier, monospace;
 }
 
+/* navigation */
+html { scroll-behavior: smooth; }
+
+/* 심플 sticky 네비 예시(원하면 position: static으로 변경) */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255,255,255,0.95);
+  padding: 6px 0;
+  border-bottom: 1px solid #ececec;
+}
+.top-nav ul { display:flex; gap:10px; list-style:none; overflow-x:auto; padding-left:6px; }
+.top-nav a { padding:8px 12px; color:#2c3e50; text-decoration:none; border-radius:6px; font-weight:600; }
+
+/* sticky 네비 때문에 섹션이 가려지는 것을 방지 */
+h3 { scroll-margin-top: 90px; } /* 네비 높이에 따라 조정 */
+
 /* 모바일 반응형 (iPad 및 모바일) */
 @media (max-width: 768px) {
     body {
